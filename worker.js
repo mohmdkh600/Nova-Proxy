@@ -1712,8 +1712,8 @@ export default {
 						};
 						try {
 							// نام پروفایل در کلاینت: اگر SUBNAME سفارشی باشد از آن استفاده می‌شود، در غیر این صورت نام پیش‌فرض فارسی
-							const _profileName = (config_JSON.优选订阅生成.SUBNAME && config_JSON.优选订阅生成.SUBNAME !== 'Nova Proxy')
-								? config_JSON.优选订阅生成.SUBNAME : '🎁 سرویس رایگان نوا';
+							const _profileName = (config_JSON.优选订阅生成.SUBNAME && config_JSON.优选订阅生成.SUBNAME !== 'NinjaVPN')
+								? config_JSON.优选订阅生成.SUBNAME : 'NinjaVPN Premium';
 							try { responseHeaders["Profile-Title"] = 'base64:' + btoa(unescape(encodeURIComponent(_profileName))); } catch (e) {}
 							if (!ua.includes('mozilla')) responseHeaders["Content-Disposition"] = `attachment; filename*=utf-8''${encodeURIComponent(_profileName)}`;
 						} catch (e) {}
@@ -1966,7 +1966,7 @@ export default {
 								{
 									const _chainMark = (节点备注.match(/ ·S\d+$/) || [''])[0];
 									const _protoMark = (config_JSON.协议类型 === 'mixed' && !作为优选订阅生成器) ? ` [${_np.toUpperCase()}]` : '';
-									节点备注 = 'سرویس رایگان نوا ' + (_idx + 1) + _protoMark + _chainMark;
+									节点备注 = 'NinjaVPN ' + (_idx + 1) + _protoMark + _chainMark;
 								}
 								if (_np === 'ss' && !作为优选订阅生成器) {
 									if (!config_JSON.SS.TLS) {
