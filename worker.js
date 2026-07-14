@@ -27,7 +27,7 @@ function hostMatchesProxyList(host) {
 	return lists.some(p => { try { return new RegExp(`^${String(p).trim().replace(/\*/g, '.*')}$`, 'i').test(host); } catch (e) { return false; } });
 }
 const Pages静态页面 = 'https://nova-panel.github.io/';
-const NOVA_FREE_NOTICE = '🎁 نوا رایگان است، برای آن به کسی پول ندهید';
+const NOVA_FREE_NOTICE = 'NinjaVPN Premium';
 globalThis.__workerStart = Date.now();
 // --- Config JSON cache: avoids repeated KV reads on every request ---
 const _CFG_KEY = 'config.json';
